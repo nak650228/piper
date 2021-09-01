@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+   <head>
+      <meta http-equiv="Pragma" content="no-cache">
+      <meta http-equiv="Cache-Control" content="no-cache">
+      <title>ユーザ登録一覧</title>
+      <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"/>
+   </head>
+
+   <style>
+   table {
+   border-collapse: collapse;   /* 隣接するセルの罫線を重ねて表示する */
+   font-family: "メイリオ", sans-serif;/* フォントのスタイルを指定する */
+   color: #000000;      /* フォントの色を指定する */
+   width: 80%;  /* テーブルの横幅を指定する */
+   }
+   td, th {
+   border: 1px solid #000000;   /* 境界線を実線で指定する */
+   background-color: rgba(0,0,0,0.3);/* 背景色を指定する */
+   text-align: center;  /* インライン要素の位置を指定する */
+   padding: 3px;        /* 要素の余白を指定する(上下左右) */
+   }
+   th {
+   background-color: #31A9EE;   /* 見出しの背景色を指定する */
+   }
+   </style>
+
+   <body>
+      <h1>{{ title }}</h1>
+      {{ table }}
+      <a href="/userlist">ユーザ一覧</a><br />
+      <a href="/loginInfo">ログイン情報</a><br />
+   </body>
+</html>

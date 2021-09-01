@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}User List{% endblock %}
+
+{% block content %}
+<h1>登録ユーザ一覧</h1>
+<div class="table-responsive">
+    <table class="table table-bordered">
+      <tr>
+        <th>ユーザ名</th>
+        <th>画像ファイル名</th>
+        <th>ニュースフィード名</th>
+        <th>路線情報</th>
+        <th>勤務地</th>
+      </tr>
+      {% for result in results %}
+      <tr>
+        <td>{{ result.Name }}</td>
+        <td>{{ result.ImageName }}</td>
+        <td>{{ result.NewFeed }}</td>
+        <td>{{ result.TrainInfo }}</td>
+        <td>{{ result.WorkPlace }}</td>
+      </tr>
+      {% else %}
+        <td>no entry exist!</td>
+      {% endfor %}
+    </table>
+</div>
+
+{% endblock %}
+
